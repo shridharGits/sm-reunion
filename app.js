@@ -17,7 +17,7 @@ app.use('/api', userRoutes);
 // creating tables
 app.get('/', async(req, res)=>{
     try{
-        res.sendFile(path.join(__dirname, 'index.html'));
+        res.sendFile(path.join(__dirname, '/index.html'));
     }
     catch(e){
         res.status(400).json({
