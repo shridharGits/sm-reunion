@@ -5,7 +5,6 @@ const app = express()
 const pool = require('./connect')
 const PORT = process.env.PORT || 3000;
 
-
 // routes
 const authRoutes = require('./routes/auth')
 const userRoutes = require('./routes/user')
