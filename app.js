@@ -3,6 +3,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const pool = require('./connect')
+
 const PORT = process.env.PORT || 3000;
 
 // routes
@@ -15,7 +16,7 @@ app.use('/api', userRoutes);
 
 
 // creating tables
-app.get('/', async(req, res)=>{
+app.get('/', (req, res)=>{
     try{
         res.sendFile(path.join(__dirname, '/index.html'));
     }
