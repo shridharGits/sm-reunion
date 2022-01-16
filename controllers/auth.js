@@ -1,4 +1,6 @@
-require("dotenv").config();
+if(process.env.NODE_ENV !== 'production'){
+    require("dotenv").config();
+}
 const pool = require('../connect')
 const { uuidv4 } = require('uuid')
 
