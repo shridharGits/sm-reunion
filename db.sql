@@ -2,6 +2,8 @@ CREATE DATABASE reunion;
 
 -- \c into database
 
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
 CREATE TABLE IF NOT EXISTS userDatabase(
 user_id uuid DEFAULT uuid_generate_v4(),
 username VARCHAR(50) UNIQUE NOT NULL,
