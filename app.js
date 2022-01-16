@@ -18,7 +18,7 @@ app.use('/api', userRoutes);
 // creating tables
 app.get('/', (req, res)=>{
     try{
-        res.sendFile(path.join(__dirname, '/index.html'));
+        res.json('welcome');
     }
     catch(e){
         res.status(400).json({
